@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-I. -Wall
+CFLAGS=-I. -Wall -g
 OUTDIR=bin
 HELPER_SRCS:=$(shell find C_Helper -name '*.c')
 CLIENT_SRCS:=$(shell find C_Client -name '*.c')
