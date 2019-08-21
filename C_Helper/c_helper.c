@@ -22,7 +22,7 @@ int send_data(int sockfd, const char* msg, size_t size){
     while (sent < size){
         bytes = write(sockfd, msg+sent, size-sent);
         if (bytes < 0){
-            ret = bytes;
+            ret = -errno;
             break;
         }
         if (bytes == 0){
