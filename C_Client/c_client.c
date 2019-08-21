@@ -15,7 +15,7 @@ int main(int argc, char* argv[]){
     }
     char buffer[256] = {0};
     struct sockaddr_in server_addr;
-    u_short portno = atoi(argv[2]);
+    unsigned short portno = atoi(argv[2]);
     server_addr.sin_family = AF_INET; // IP Addresses
     server_addr.sin_port = htons(portno); // Make sure to use network byte order (Big Endian)
     
