@@ -7,7 +7,8 @@
 
 int main(int argc, char* argv[]){
     if(argc < 3){
-        error("No port supplied. Usage: ./c_client SERVER_ADDR PORT_NUMBER");
+        printf("%s\n", "No port supplied. Usage: ./c_client SERVER_ADDR PORT_NUMBER");
+        exit(1);
     }
     int sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_IP); // Create IP Socket. AF_INET: Internet Socket, SOCK_STREAM: TCP, IPPROTO_IP: IP Protocol.
     if (sockfd < 0){
